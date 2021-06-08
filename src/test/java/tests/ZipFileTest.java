@@ -17,11 +17,8 @@ public class ZipFileTest {
         String zipPassword = "1111";
         String unzipTxtFilePath = "./src/test/resources/files/unzip/text.txt";
         String expectedData = "Привет учитель!";
-
         unzip(zipFilePath, unzipFolderPath, zipPassword);
-
         String actualData = readTextFromPath(unzipTxtFilePath);
-
         assertThat(actualData, containsString(expectedData));
     }
 
